@@ -28,3 +28,8 @@ http://down.51cto.com/data/2244782
 
 Python专业学习图谱大全汇总
 http://down.51cto.com/data/2242562
+
+---------------------------------------
+一张图让你30分钟学会Python :
+
+![一张图让你30分钟学会Python-20170512](https://raw.githubusercontent.com/taoste/Hello-World/master/Technical%20File(PDF)/%E4%B8%80%E5%BC%A0%E5%9B%BE%E8%AE%A9%E4%BD%A030%E5%88%86%E9%92%9F%E5%AD%A6%E4%BC%9APython-20170512.png)
