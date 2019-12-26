@@ -1,0 +1,550 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>点亮资讯达人图标</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+<style>
+/* reset */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,dl, dt, dd, ul, ol, li, fieldset, form, lengend, button, input, textarea,th, td { margin: 0; padding: 0 }
+body,button, input, select, textarea { font-family: "宋体","Arial Narrow",HELVETICA; font-size:14px; background:#ffffff; -webkit-text-size-adjust:100% }
+h1,h2,h3,h4, h5, h6 { font-size: 100%; font-weight:normal }
+address, cite, dfn, em, var,i { font-style: normal }
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace }
+small { font-size: 12px }
+ul, ol { list-style: none }
+a { outline:none; color:#2e99e6; text-decoration:none }
+a:focus{ outline:0 }
+legend { color: #000 }
+fieldset, img { border: none }
+button, input, select, textarea { font-size: 100% }
+table { border-collapse: collapse; border-spacing:0; width:100%; height:100% }
+img { vertical-align:bottom }
+/* global */
+.fix { *zoom:1 }.fix:after{ content:''; display:table; clear:both }
+.pr { position:relative }.pa { position:absolute }
+.l { float:left }.r { float:right }
+.tl { text-align:left }.tr { text-align:right }.tc { text-align:center }
+.dis { display:block }.undis { display:none }
+.w1000 { width:1000px; margin:0 auto }
+
+/* layout style */
+.nav { min-width:1000px;  height:60px; line-height:28px; background:#379be9; background:url(//mat1.gtimg.com/www/map/zixun/nav_bg.jpg) repeat-x; padding:0 30px 0 200px }
+
+/*主导航 迷你导航*/
+.nav-Article-QQ { padding:0 10px 0 0; line-height:60px; float:left; font-family: Microsoft Yahei; position: relative; outline:0 }
+.nav-Article-QQ ul { float:left }
+.nav-Article-QQ ul li { float:left; font-size:16px; margin-right:55px }
+.nav-Article-QQ ul li a,.nav-Article-QQ ul li a:visited,.nav-Article-QQ ul li a:link,.nav-Article-QQ ul li a:hover { color:#feffff; text-decoration:none }
+.nav-Article-QQ ul li a { display:block }
+.nav-Article-QQ ul li a.hover { background:url(//mat1.gtimg.com/www/map/zixun/c1.png) no-repeat center 100%}
+
+.banner { background:url(//mat1.gtimg.com/www/map/zixun/banner_bg.png) repeat-x; height:387px; text-align:center }
+.banner-pic  { background:url(//mat1.gtimg.com/www/map/zixun/banner.png) no-repeat center; height:387px; margin:0 auto}
+.btn { position:relative; height:1px; width:1026px; margin:0 auto }
+.btn a { background:url(//mat1.gtimg.com/www/map/zixun/s_btn.png) no-repeat 0 -70px; _background:url(//mat1.gtimg.com/www/map/zixun/s_btn1.png) no-repeat 0 -65px; position:absolute; left:250px; top:-94px; width:255px; height:65px }
+.btn a.clicked { background:url(//mat1.gtimg.com/www/map/zixun/s_btn.png) no-repeat 0 0; _background:url(//mat1.gtimg.com/www/map/zixun/s_btn1.png) no-repeat 0 0 }
+.info { width:1151px; margin:0 auto; height:126px; position:relative}
+.info-pic { background:url(//mat1.gtimg.com/www/map/zixun/info_img.png) no-repeat center; height:126px }
+.info img { margin-left:47px }
+.info .pic { background:url(//mat1.gtimg.com/www/map/zixun/pic_2012112601.png) no-repeat; width:310px; height:260px; position:absolute; right:40px; bottom:-20px; overflow:hidden; _background:url(//mat1.gtimg.com/www/map/zixun/pic_ie6_1.jpg.jpg) no-repeat;}
+.info .pic a { position:absolute; width:20px; height:20px; left:75px; top:200px; cursor:pointer}
+.pic_in { position:absolute; top:-999em; left:0; background:url(//mat1.gtimg.com/www/map/zixun/pic_2012112602.png) no-repeat; _background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='crop', src="//mat1.gtimg.com/www/map/zixun/pic_2012112602.png"); width:310px; height:260px; }
+#content { background:url(//mat1.gtimg.com/www/map/zixun/con_bg.png) repeat-x; height:754px; text-align:center }
+.content-pic { background:url(//mat1.gtimg.com/www/map/zixun/con_img.png) no-repeat center; height:754px }
+#footer { background:#333 }
+#footer a, #footer .tcopyright { color:#656565 }
+
+
+
+/* login S */
+
+/* login Sprite */
+.weiboIcon, .pengyouIcon, .mailIcon, .qzoneIcon, .login { background:url(//mat1.gtimg.com/www/map/zixun/s_login_2.png) no-repeat; padding:0 4px 0 24px}
+
+.mininavRight {position: absolute;right: 0;color: #C7C7C7;line-height: 28px;height: 28px;text-align: left; padding: 16px 10px 16px 0}
+#login_div { position:fixed; _position:absolute; width:490px; height:382px;  top:50%; left:50%; margin:-165px 0 0 -276px; z-index:9999; display:none }
+.layoutBg{width:100%;position:absolute;top:0;left:0;z-index:8888;display:none;background:url(//mat1.gtimg.com/www/images/qq2012/alphabg.png); _background:#000;_opacity:0.3_;filter:alpha(opacity=30)}
+#loginAll a { height:28px; display:inline-block; font-family:Tahoma,"宋体"; color:#666; line-height:28px }
+#loginAll .login { width: 32px; height: 22px; margin-right:4px; background-position: 0 0 }
+#loginAll .login:hover { background-position:0 -25px }
+
+
+
+/* menu */
+.menu-item { float:left }
+.menu { position:relative; font-size:12px; height:35px; float:left }
+.menu-hd { height:28px; display:inline-block; font-family:Tahoma,"宋体"; color:#fff; line-height:28px }
+.menu-bd { position:absolute; box-shadow:-1px -1px 5px #e3e3e3; top:32px; width:185px; display:none }
+.menu-bd-in { border:1px solid #E3E3E3; border-top:1px solid #1669ab; box-shadow:1px 1px 5px #e3e3e3; background:#fff; padding:5px 10px 0 }
+.menu-bd-in li { line-height:21px }
+.menu-bd-in li a { color:#666 }
+
+/* user */
+.user { font-family: tohama}
+.user .menu-hd { width:28px; line-height:0;  margin-right:5px; margin-top:2px; display:block; position:relative; text-decoration:none  }
+.user img { vertical-align:top }
+.user .menu-hd img { width:22px; height:22px; overflow:hidden; background:#d6edff; border:1px solid #328bcf; padding:2px }
+.user .menu-hd .userVip{ }
+.user .menu-hd:hover .userVip{ visibility:visible }
+.user .menu-hd .userVip .icon_member { position:absolute; width:13px; height:13px; right:-3px; bottom:1px; padding:0; border:none; background:none }
+.user .menu-bd .userVip  { margin-right:10px  }
+.user .menu-bd-in { padding-bottom: 10px }
+.picT-p { width:38px; height:38px; overflow:hidden; background:#fff; border:1px solid #d9d9d9; padding:2px; float:left;margin-right:7px; margin-top:5px }
+.picT-t {}
+.picT-t p { line-height:24px; color:#666 }
+.picT-t a { color:#333 }
+.user .menu-bd .picT-p { width:38px; height:38px; overflow:hidden; background:#fff; border:1px solid #d9d9d9; padding:2px }
+
+/*weibo*/
+.weibo {  }
+.weiboIcon { background-position:4px -55px }
+
+/*qzone*/
+.qzone {}
+.qzoneIcon { background-position:2px -86px }
+
+/*mail*/
+.mail {}
+.mailIcon { background-position:3px -113px }
+
+/* login E */
+
+</style>
+<script type="text/javascript" src="//js.aq.qq.com/js/aq_common.js"></script>
+</head>
+
+<body>
+<div class="nav">
+	<!--nav-Article-QQ航 -->
+	<div class="nav-Article-QQ clearfix" accesskey="2" title="" tabindex="-1">
+		<ul class="clearfix" bosszone="mainNav">
+			 <li bosszone=""><a href="http://www.qq.com/map/" target="_blank" title="腾讯网首页" accesskey="1">网站地图</a></li>
+			 <li bosszone=""><a href="http://www.qq.com/history/" target="_blank">主题皮肤回顾</a></li>
+			 <li bosszone=""><a href="javascript:void(0)" class="hover">点亮资讯达人</a></li>
+                                      <li bosszone=""><a href="http://www.qq.com/sheweishouye.htm" target="_blank">主页设置说明</a></li>
+		</ul>
+	</div>
+	<!-- /nav-Article-QQ -->
+
+	<div class="mininavRight" id="logkey" bosszone="logkey">
+	<div id="loginAll" class="r" style="display:block">
+		<a href="javascript:void(0);" class="login" onclick="userLogin()" target="_self" id="onekey" bosszone="onekey"></a>
+		<a href="http://t.qq.com?pref=qqcom.home.weiboIN" class="weiboIcon" id="weibo" target="_blank" bosszone="weibo" alt="微博" title="微博"></a>
+		<a href="http://qzone.qq.com" class="qzoneIcon" id="qzone" target="_blank"  bosszone="qzone" alt="空间" title="空间"></a>
+		<a href="http://mail.qq.com" class="mailIcon" id="qmail" target="_blank" bosszone="qmail" alt="邮箱" title="邮箱"></a>
+	</div>
+
+	<div id="logined" class="r" style="display:none;">
+		<!-- user -->
+		<div class="menu-item">
+			<div class="menu user">
+				<a href="#"  class="menu-hd" rel="nofollow"><img src="//mat1.gtimg.com/pinglun/images/20110524/pic1.jpg"  id="userPic_s" />
+					<span class="userVip" id="userVip1"><img src="//mat1.gtimg.com/news/dc/images/Member.png" class="icon_member"/></span>
+				</a>
+				<div class="menu-bd">
+					<div class="menu-bd-in">
+						<div class="picT clearfix">
+							<img class="picT-p" src="//mat1.gtimg.com/pinglun/images/20110524/pic1.jpg" id="userPic_b" />
+							<div class="picT-t">
+								<p>您好，<span id="userName">分享的企鹅</span></p>
+								<p><span class="userVip" id="userVip2"><img src="//mat1.gtimg.com/news/dc/images/Member.png" /> VIP<em class="userVip_num" id="userVip_num">2</em></span><a href="javascript:void(0);" id="loginOut" target="_self">[退出]</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /user -->
+
+		<!-- weibo -->
+		<div class="menu-item">
+			<div class="menu weibo">
+				<a href="http://t.qq.com?pref=qqcom.home.weiboenter" class="menu-hd weiboIcon" id="weiboNum" target="_blank" rel="nofollow"></a>
+				<div class="menu-bd">
+					<div class="menu-bd-in">
+						<ul bosszone="weiboinfor">
+							<li id="weiboTitle">腾讯微博:</li>
+							<li id="msgLi" class="undis"><a href="http://t.qq.com/messages/inbox#pmtid=?pref=qqcom.home.wbinbox" target="_blank">私信 (<span id="msgNum"></span>)</a></li>
+							<li id="atLi" class="undis"><a href="http://t.qq.com/at?pref=qqcom.home.wbat" target="_blank">提到我的 (<span id="atNum"></span>)</a></li>
+							<li id="fansLi" class="undis"><a href="http://t.qq.com/follower.php?pref=qqcom.home.wbfollow" target="_blank">新增听众 (<span id="fansNum"></span>)</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /weibo -->
+
+		<!-- qzone -->
+		<div class="menu-item">
+			<div class="menu qzone">
+				<a href="http://qzone.qq.com" class="menu-hd qzoneIcon" id="qzoneNum" target="_blank" rel="nofollow"></a>
+				<div class="menu-bd">
+					<div class="menu-bd-in">
+						<ul bosszone="qzoneinfor">
+							<li id="qzoneTitle">QQ空间:</li>
+							<li id="passiveLi" class="undis"><a href="http://qzone.qq.com" target="_blank">我的动态 (<span id="passiveNum"></span>)</a></li>
+							<li id="InitLi" class="undis"><a href="http://qzone.qq.com" target="_blank">好友动态 (<span id="InitNum"></span>)</a></li>
+							<li id="AboutLi" class="undis"><a href="http://qzone.qq.com" target="_blank">我的参与 (<span id="AboutNum"></span>)</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /qzone -->
+
+		<!-- mail -->
+		<div class="menu-item">
+			<div class="menu mail">
+				<a href="http://mail.qq.com" class="menu-hd mailIcon" id="mailNum" target="_blank" rel="nofollow"></a>
+				<div class="menu-bd">
+					<div class="menu-bd-in">
+						<ul bosszone="qmailinfor">
+							<li id="mailTitle">QQ邮箱:</li>
+							<li id="inboxLi" class="undis"><a href="http://mail.qq.com" target="_blank">未读邮件 (<span id="inboxNum"></span>)</a></li>
+							<li id="bottleLi" class="undis"><a href="http://mail.qq.com" target="_blank">漂流瓶 (<span id="bottleNum"></span>)</a></li>
+							<li id="gmailLi" class="undis"><a href="http://mail.qq.com" target="_blank">群邮件 (<span id="gmailNum"></span>)</a></li>
+							<li id="dmailLi" class="undis"><a href="http://mail.qq.com" target="_blank">文件夹 (<span id="dmailNum"></span>)</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /mail -->
+		
+</div><!-- /site_nav_mblogin -->
+
+</div>
+
+</div>
+<div id="header">
+	<div class="banner">
+    	<div class="banner-pic"></div>
+		<div class="btn" id="dianliang"><a href="javascript:void(0)"></a></div>
+    </div>
+    <div class="info">
+		<div class="info-pic"></div>
+    	<div class="pic" id="pic"><a href="javascript:void(0)" id="btn_h"></a>
+        	<div class="pic_in" id="pic_in"></div>
+        </div>
+    </div>
+</div>
+<!--pgv 20180329 by yijunliu-->
+<script src="//mat1.gtimg.com/pingjs/ext2020/dc2017/publicjs/m/ping.js" charset="gbk"></script>
+
+<script>!function(t,e){"use strict";function a(){var t,e,a=(""+p.catalog_full).replace(/-/g,".").replace(/_/g,"-");p.topic&&p.topic.name&&p.topic.name.length>0?(t="L.",e="Z."+a+"."+p.topic.name):(t="L."+a,e="Z.");var n="W."+p.type,o="M."+p.tpl.type+p.tpl.stype,i="P."+(""+p.site).replace(/_/g,"-"),c="F."+f,l=t+"_"+e+"_"+n+"_"+o+"_"+i+"_"+c;l&&r({pgUserType:l})}function n(t){o(e,"click",function(e){var a=e.target;"img"===a.tagName&&(a=a.parentNode);var n=a.tagName.toLowerCase(),o=a.getAttribute("href");if(!o||o.indexOf("qqcom_pgv_from=")>-1)return!1;if("a"===n&&a.hostname&&a.hostname.indexOf("qq.com")>-1){var r=o+(a.search?"&":"?")+"qqcom_pgv_from="+t;a.setAttribute("href",r)}})}function o(a,n,o){var r=function(a){return a=a||t.event,a.target||(a.target=a.srcElement||e),3===a.target.nodeType&&(a.target=a.target.parentNode),a};return a.addEventListener?a.addEventListener(n,function(t){o.call(t.currentTarget,r(t))},!1):a.attachEvent("on"+n,function(t){o.call(a,r(t))}),!0}if(!t||!t.location||"function"!=typeof t.pgvMain)return!1;var r=function(){var e=arguments;setTimeout(function(){t.pgvMain.apply(this,e)},0)},i=location.search.replace(/adtag=client\.qq\.\d+_\.0/i,"from=tips"),c=["aio","tips"],f="def";location.search.indexOf("qqcom_pgv_from=")>-1&&(f=location.host+location.pathname+location.search);var p=t.ARTICLE_INFO||null,l=p&&p.catalog_full;if(l)for(var g=0;g<c.length;g+=1)if(i.indexOf(c[g])>-1){n(c[g]);break}l&&a(),l||("undefined"!=typeof whatCatalog&&(t.pvCSTM=t.whatCatalog),r({pgUserType:"F."+f}))}(window,document);</script><!--/pgv 20160801-->
+<!-- 视频来源ptag --><script src="//mat1.gtimg.com/v/ptag/ptag_1.2.js" async="true"></script>
+<!--[if !IE]>|xGv00|a1d505b81f0731c97405c05986e06bb8<![endif]-->
+<!--[if !IE]>|xGv00|9c0360d10346546f68f55326baad5f5c<![endif]-->
+<div id="content">
+	<div class="content-pic"></div>
+</div>
+<div id="footer"><script>
+var NavNoticeSiteName = ["sports","tech","games","cul","edu","fashion","house","auto","finance","ent"]; 
+</script>
+<script src="//mat1.gtimg.com/www/chrometips/notification2017_v0118.js"></script><!--[if !IE]>|xGv00|160405494288ecc3516e240c185c4fd7<![endif]-->
+<style>
+.tcopyright {width:960px;margin:0 auto;padding:8px 0;font-size:12px;line-height:28px;color:#333; text-align:center; overflow:hidden;clear:both;}
+.tcopyright .en{font-family:Arial;}
+.tcopyright a{color:#333;text-decoration: none;}
+.tcopyright a:hover{color:#bd0a01;text-decoration: underline;}
+</style>
+<div id="tcopyright" class="tcopyright" bossZone="footer" role="contentinfo">
+	<div>
+		<a href="http://www.tencent.com/" target="_blank" rel="nofollow">关于腾讯</a> | <a href="http://www.tencent.com/index_e.shtml" target="_blank" rel="nofollow">About Tencent</a> | <a href="http://www.qq.com/contract.shtml" target="_blank" rel="nofollow">服务协议</a> | <a href="http://www.qq.com/privacy.htm" target="_blank" rel="nofollow">隐私政策</a> | <a href="http://open.qq.com/" target="_blank" rel="nofollow">开放平台</a> | <a href="http://www.tencentmind.com/" target="_blank" rel="nofollow">广告服务</a> | <a href="http://hr.tencent.com/" target="_blank" rel="nofollow">腾讯招聘</a> | <a href="http://gongyi.qq.com/" target="_blank" rel="nofollow">腾讯公益</a> | <a href="https://cloud.tencent.com/?from=txwdibu" target="_blank" rel="nofollow">腾讯云</a> | <a href="http://service.qq.com/" target="_blank" rel="nofollow">客服中心</a> | <a href="http://news.qq.com/zt2014/2014qtnews/ccybspxd.htm
+" target="_blank" rel="nofollow">举报中心</a> | <a href="http://www.qq.com/map/" target="_blank" rel="nofollow">网站导航</a>
+	</div>
+  	<div class="en">Copyright &copy; 1998 - 2019 Tencent. All Rights Reserved</div>
+    <div>
+		<a href="http://www.tencent.com/" target="_blank" rel="nofollow">腾讯公司</a> <a href="http://www.tencent.com/zh-cn/le/copyrightstatement.shtml" target="_blank" rel="nofollow">版权所有</a>
+	</div>
+</div><!--[if !IE]>|xGv00|1846ccac67b3b46811044596d33e3588<![endif]--></div>
+<div id="layoutBg" class="layoutBg"></div>
+<div id="login_div" style="position:fixed;_position:absolute;width:400px;height:382px;padding:0;margin:0;top:50%;left:-9999px;margin:-165px 0 0 -276px;z-index:9999;visibility:hidden;">
+	<iframe id="login_frame" height="100%" scrolling="auto" width="100%" frameborder="0" src=""></iframe>
+</div> 
+
+<script type="text/javascript" src="//mat1.gtimg.com/www/qq_index/js/Qfast1.0.1.js"></script>
+<script src="//mat1.gtimg.com/news/dc/js/ui_2012111901.js" charset="utf-8"></script>
+
+<script>
+var pic = qq.G('pic'), btn_h = qq.G('btn_h'), pic_in = qq.G('pic_in');
+qq.EA(pic, 'mouseover', function(){
+	pic_in.style.top = 0;
+});
+qq.EA(pic_in, 'mouseout', function(){
+	pic_in.style.top = '-999em';
+});
+// loagin S
+document.domain="qq.com";
+
+var login_wnd = qq.G("login_div"), login_bg = qq.G("layoutBg"), weiboNum = qq.G("weiboNum"), msgNum = qq.G("msgNum"), atNum = qq.G("atNum"), fansNum = qq.G("fansNum"),
+qzoneNum = qq.G("qzoneNum"), passiveNum = qq.G("passiveNum"), InitNum = qq.G("InitNum"), AboutNum = qq.G("AboutNum"),
+mailNum = qq.G("mailNum"), inboxNum = qq.G("inboxNum"), bottleNum = qq.G("bottleNum"), gmailNum = qq.G("gmailNum");
+
+
+
+function ptlogin2_onResize(width, height) {
+	if (login_wnd)  {
+		login_wnd.style.cssText = 'width:' + width + 'px; height:' + height + 'px; display:block; margin-left:-' +  parseInt(width/2) + 'px; margin-top:-' + parseInt(height/2);
+	}
+}
+
+function ptlogin2_onClose(){
+	login_wnd.style.left = "-9999px";
+	login_bg.style.display = "none";
+}
+
+function userLogin(){
+	qq.G("login_frame").src = "http://ui.ptlogin2.qq.com/cgi-bin/login?hide_title_bar=0&low_login=0&qlogin_auto_login=1&no_verifyimg=1&link_target=blank&appid=636014201&target=self&s_url=" + location.protocol + "//www.qq.com/qq2012/loginSuccess.htm";
+	login_bg.style.cssText = 'display:block; height:' + document.body.clientHeight + 'px';
+}
+
+
+
+/*一键登录数据*/
+function loginAll(obj){
+	if(obj.result == 0){
+		MblogTotalnum = obj.info.Mblog.totalnum || 0; qq.localData.set('Mblog-totalnum', obj.info.Mblog.totalnum); 
+		MblogMsgnum = obj.info.Mblog.msgnum || 0; qq.localData.set('Mblog-msgnum', obj.info.Mblog.msgnum);
+		MblogAtnum = obj.info.Mblog.atnum || 0; qq.localData.set('Mblog-atnum', obj.info.Mblog.atnum);
+		MblogFansnum = obj.info.Mblog.fansnum || 0; qq.localData.set('Mblog-fansnum', obj.info.Mblog.fansnum);
+		QZoneTotalnum = obj.info.QZone.totalnum || 0; qq.localData.set('QZone-totalnum', obj.info.QZone.totalnum);
+		QZonePassivenum = obj.info.QZone.passivenum || 0; qq.localData.set('QZone-passivenum', obj.info.QZone.passivenum);
+		QZoneInitnum = obj.info.QZone.initnum || 0; qq.localData.set('QZone-initnum', obj.info.QZone.initnum);
+		QZoneAboutnum = obj.info.QZone.aboutnum || 0; qq.localData.set('QZone-aboutnum', obj.info.QZone.aboutnum);
+		QMailTotalnum = obj.info.QMail.totalnum || 0; qq.localData.set('QMail-totalnum', obj.info.QMail.totalnum);
+		QMailInboxnum = obj.info.QMail.inboxnum || 0; qq.localData.set('QMail-inboxnum', obj.info.QMail.inboxnum);
+		QMailBottlenum = obj.info.QMail.bottlenum || 0; qq.localData.set('QMail-bottlenum', obj.info.QMail.bottlenum);
+		QMailGmailnum = obj.info.QMail.gmailnum || 0; qq.localData.set('QMail-gmailnum', obj.info.QMail.gmailnum);
+		QMailDmailnum = obj.info.QMail.dmailnum || 0; qq.localData.set('QMail-dmailnum', obj.info.QMail.dmailnum);
+		FriendTotalnum = obj.info.Friend.totalnum || 0; qq.localData.set('Friend-totalnum', obj.info.Friend.totalnum);
+		FriendPassivenum = obj.info.Friend.passivenum || 0; qq.localData.set('Friend-passivenum', obj.info.Friend.passivenum);
+		FriendInitnum = obj.info.Friend.initnum || 0; qq.localData.set('Friend-initnum', obj.info.Friend.initnum);
+		FriendAboutnum = obj.info.Friend.aboutnum || 0; qq.localData.set('Friend-aboutnum', obj.info.Friend.aboutnum);
+		userInfoName = obj.nick.replace(/</,"&lt;").replace(/>/,"&gt;");qq.localData.set('nick', userInfoName);
+		userInfoVip = parseInt(obj.Vip.replace(/</,"&lt;").replace(/>/,"&gt;"));
+		if(userInfoVip >= 0 && userInfoVip <= 8){
+		}else{
+			userInfoVip = 0;
+		}
+		qq.localData.set('Vip', userInfoVip || 0);
+		userInfoFace = obj.Face || '//mat1.gtimg.com/news/dc/temp/c1.jpg'; qq.localData.set('Face', userInfoFace || '//mat1.gtimg.com/news/dc/temp/c1.jpg');
+		Face = obj.Face;
+		nick = obj.nick;
+		if(userInfoVip){
+			qq.G('userVip_num').innerHTML = userInfoVip;
+		}else{
+			qq.hide(qq.G('userVip1'));
+			qq.hide(qq.G('userVip2'));
+		}	
+			qq.A(qq.G('userPic_s'), 'src', userInfoFace);
+			qq.A(qq.G('userPic_b'), 'src', userInfoFace);
+
+		if(MblogTotalnum){
+			if(MblogTotalnum > 99){
+				weiboNum.innerHTML = "99+";
+			}else{
+				weiboNum.innerHTML = MblogTotalnum;
+			}
+			//weiboNum.style.cssText = 'padding:0 7px';
+			if(MblogMsgnum != "" || MblogMsgnum != 0){
+				msgNum.innerHTML = MblogMsgnum;
+				qq.show(qq.G("msgLi"));
+			}
+			if(MblogAtnum != ""){
+				atNum.innerHTML = MblogAtnum;
+				qq.show(qq.G("atLi"));
+			}
+			if(MblogFansnum != ""){
+				fansNum.innerHTML = MblogFansnum;
+				qq.show(qq.G("fansLi"));
+			}
+		}else{
+			qq.G("weiboTitle").innerHTML = "<a href='http://t.qq.com' target='_blank'>点击查看腾讯微博</a>";
+		}
+
+		if(QZoneTotalnum){
+			if(QZoneTotalnum > 99){
+				qzoneNum.innerHTML = "99+";
+			}else{
+				qzoneNum.innerHTML = QZoneTotalnum;
+			}
+			//qzoneNum.style.cssText = 'padding:0 7px';
+			if(QZonePassivenum != ""){
+				passiveNum.innerHTML = QZonePassivenum;
+				qq.show(qq.G("passiveLi"));
+			}
+			if(QZoneInitnum != ""){
+				InitNum.innerHTML = QZoneInitnum;
+				qq.show(qq.G("InitLi"));
+			}
+			if(QZoneAboutnum != ""){
+				AboutNum.innerHTML = QZoneAboutnum;
+				qq.show(qq.G("AboutLi"));
+			}
+		}else{
+			qq.G('qzoneTitle').innerHTML = '<a href="http://qzone.qq.com" target="_blank">点击查看QQ空间</a>';
+		}	
+		if(QMailTotalnum){
+			if(QMailTotalnum > 99){
+				mailNum.innerHTML = "99+";
+			}else{
+				mailNum.innerHTML = QMailTotalnum;
+			}
+			
+			weiDu = QMailTotalnum - QMailInboxnum - QMailBottlenum - QMailGmailnum - QMailDmailnum;
+			if(QMailInboxnum != ""){
+				if(weiDu != 0){
+					inboxNum.innerHTML = Number(QMailInboxnum) + Number(weiDu);
+					qq.show(qq.G('inboxLi'));
+				}else{
+					inboxNum.innerHTML = QMailInboxnum;
+					qq.show(qq.G('inboxLi'));
+				}
+			}else if(weiDu != 0){
+				inboxNum.innerHTML = weiDu;
+				qq.show(qq.G('inboxLi'));
+			}
+			if(QMailBottlenum != ""){
+				bottleNum.innerHTML = QMailBottlenum;
+				qq.show(qq.G("bottleLi"));
+			}
+			if(QMailGmailnum != ""){
+				gmailNum.innerHTML = QMailGmailnum;
+				qq.show(qq.G('gmailLi'));
+			}
+			if(QMailDmailnum != ""){
+				dmailNum.innerHTML = QMailDmailnum;
+				qq.show(qq.G('dmailLi'));
+			}
+			if(QMailInboxnum == "" && QMailBottlenum == "" && QMailGmailnum == "" && QMailDmailnum == ""){
+				qq.G("mailTitle").innerHTML = "<a href='http://mail.qq.com' target='_blank'>点击查看QQ邮箱</a>";
+			}
+		}else{
+			qq.G("mailTitle").innerHTML = "<a href='http://mail.qq.com' target='_blank'>点击查看QQ邮箱</a>";
+		}	
+		 var D = "";
+
+		qq.G("userName").innerHTML = userInfoName;
+		qq.show(qq.G('logined'));
+		qq.hide(qq.G('loginAll'));
+		qq.EA(qq.G('loginOut'), 'click', function(){
+			login.loginOut();
+		});
+	}
+	
+
+}
+
+window["login"] = {
+	loginCheck : function(){
+		if(qq.cookie("skey")){
+			uin = Number(qq.cookie("uin").substring(1));
+			skey = qq.cookie("skey");
+			/*try{
+			console.log('loginCheck');
+				var url = "http://qfwd.qq.com/?uin=" + uin + "&skey=" + skey + "&func=loginAll&refresh=0&ran=" + Math.random();			
+				qq.crossAsynJson(url, 'loginAll', loginAll,  'utf-8');
+				console.log('loginCheckloginCheckloginCheckloginCheck');
+				
+			}catch(e){}*/
+			try{						Qfast.add("loginAll",{path:"http://qfwd.qq.com/?uin="+uin+"&skey="+skey+"&func=loginAll&refresh=0&ran="+Math.random(),type:"js",charset:"utf-8"}),Qfast(!1,"loginAll",function(){});
+			qq.localData.set('loginTime', (new Date()).getTime());
+			}catch(e){}
+		}
+	},
+	loginOut:function(){
+		var d = (new Date).getTime();
+		qq.cookie("skey", '', '', '',  "qq.com")
+		qq.hide(qq.G('logined'));
+		qq.show(qq.G('loginAll'));
+		//qq.G('cmtUser').setAttribute('src', '//mat1.gtimg.com/news/dc/images/user.png');
+		//parentLoginSuccess('logout');
+	
+		qq.G('weiboTitle').innerHTML = '腾讯微博:';
+		qq.G("qzoneTitle").innerHTML = "QQ空间:";
+		qq.G("mailTitle").innerHTML = "QQ邮箱:";	
+	},
+	loginSuccess:function(){
+		login_bg.style.display = "none";
+		login_wnd.style.left = "-9999px";
+		qq.show(qq.G('logined'));
+		qq.hide(qq.G('loginAll'));
+		login.loginCheck();
+		//parentLoginSuccess('login');
+	}
+}
+qq.each(qq.GC('.menu'), function(a, b){	
+		qq.EA(a, 'mouseover', function(){
+			
+			var _bd = qq.GC(a, '.menu-bd')[0];
+			
+			qq.show(_bd);
+			if(qq.getX(a) + qq.width(_bd) > qq.windowWidth()) {
+				qq.C(_bd, 'right', 0);
+			}else{
+				qq.C(_bd, 'left', 0);
+			}
+
+			//alert(qq.getX(a) + ':' + qq.windowWidth() + ':' + qq.width(_bd));
+		});
+		qq.EA(a, 'mouseout', function(){
+			var _bd = qq.GC(a, '.menu-bd')[0];
+			qq.hide(_bd);
+		});
+});
+
+function reloadLoginInfo(){
+var _obj = {"result":"0","nick":qq.localData.get('nick'),"Vip":qq.localData.get('Vip'),"Face":qq.localData.get('Face'),"info":{"QZone":{"totalnum":parseInt(qq.localData.get('QZone-totalnum')),"passivenum":parseInt(qq.localData.get('QZone-passivenum')),"initnum":parseInt(qq.localData.get('QZone-initnum')),"aboutnum":parseInt(qq.localData.get('QZone-aboutnum'))},"Friend":{"totalnum":parseInt(qq.localData.get('Friend-totalnum')),"passivenum":parseInt(qq.localData.get('Friend-passivenum')),"initnum":parseInt(qq.localData.get('Friend-initnum')),"aboutnum":parseInt(qq.localData.get('Friend-aboutnum'))},"QMail":{"totalnum":parseInt(qq.localData.get('QMail-totalnum')),"inboxnum":parseInt(qq.localData.get('QMail-inboxnum')),"bottlenum":parseInt(qq.localData.get('QMail-bottlenum')),"gmailnum":parseInt(qq.localData.get('QMail-gmailnum')),"dmailnum":parseInt(qq.localData.get('QMail-dmailnum'))},"Mblog":{"totalnum":parseInt(qq.localData.get('Mblog-totalnum')),"msgnum":parseInt(qq.localData.get('Mblog-msgnum')),"atnum":parseInt(qq.localData.get('Mblog-atnum')),"fansnum":parseInt(qq.localData.get('Mblog-fansnum'))}}}
+		loginAll(_obj);
+
+}
+
+//登录本地存储
+qq.EA(window, 'load', function(){
+	var _t = qq.localData.get('loginTime') || 0, t = new Date().getTime();
+	if(!qq.cookie('skey')) return;
+	if(t - _t > 60000) {
+		login.loginCheck();
+		
+	}else{
+		reloadLoginInfo();		
+	}
+});
+//login E
+var isLight = false;
+qq.EA(window, 'load', function(){
+	Qfast.add('light',{path:'http://match.qq.com/zxdr/get.php?ran=' + Math.random(),type:"js"});
+	Qfast(true,'light',function(){
+		try{
+			if(g_tubd_zxdr_get && g_tubd_zxdr_get.code == 0){
+				if(g_tubd_zxdr_get.data == 1){
+					qq.GT(qq.G('dianliang'), 'a')[0].className = 'clicked';
+					isLight = true;
+					return;
+				}else if(g_tubd_zxdr_get.data == 0){			
+					qq.GT(qq.G('dianliang'), 'a')[0].className = '';
+					return;
+				}
+			}
+		}catch(e){}
+			
+	});
+});
+
+qq.EA(qq.G('dianliang'), 'click', function(){
+	if(isLight) return;
+	if(!qq.cookie("skey")){ 
+		userLogin();
+	}
+	Qfast.add('get',{path:'http://match.qq.com/zxdr/light.php?ran=' + Math.random(),type:"js"});
+	Qfast(true,'get',function(){ qq.GT(qq.G('dianliang'), 'a')[0].className = 'clicked'; isLight = true});
+	
+});
+
+</script>
+<!-- https by sx on 2018.11.1 -->
+</body>
+</html>
+<!--[if !IE]>|xGv00|2de0074a93bb3970f67d32032cbc4aad<![endif]-->
