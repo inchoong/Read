@@ -286,7 +286,7 @@ ah.href='https://i.weread.qq.com/download?from=Website&type=Android';
 }
 if(GLOBAL.DEVICE_TYPE)
 {
-M.style.backgroundImage='url("/zh_CN/htmledition/images/mobile_function4_table_background_4x.png")';
+M.style.backgroundImage='url("./zh_CN/htmledition/images/mobile_function4_table_background_4x.png")';
 }
 if((USER_AGENT.toLocaleLowerCase().match(/safari/)&&!USER_AGENT.toLocaleLowerCase().match(/chrome/))||(USER_AGENT.toLocaleLowerCase().match(/iphone/))&&(USER_AGENT.toLocaleLowerCase().match(/micromessenger/)))
 {
@@ -541,7 +541,7 @@ c.style.cursor='pointer';
 },switchStyle:function(aC){
 switch(aC)
 {case 'pc-vertical':
-M.style.backgroundImage='url("/zh_CN/htmledition/images/mobile_function4_table_background_4x.png")';
+M.style.backgroundImage='url("./zh_CN/htmledition/images/mobile_function4_table_background_4x.png")';
 aA([al,ak,aj,d,e]);
 d.style.display='none';
 e.style.display='none';
@@ -557,7 +557,7 @@ c.style.display='none';
 }
 break;
 case 'pc-horizontal':
-M.style.backgroundImage='url("/zh_CN/htmledition/images/function4_table_background_4x.png")';
+M.style.backgroundImage='url("./zh_CN/htmledition/images/function4_table_background_4x.png")';
 aA([al,ak,aj,d,e]);
 if(ao!==0)
 {
